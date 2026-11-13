@@ -8,11 +8,13 @@ principles: [illusory-truth, mere-exposure, costly-signalling]
 effort: high
 cost: $$$
 time_to_impact: Months
-tools: [Primer, Clay Ads, influ2, HubSpot]
+tools: [Primer, Clay Ads, influ2, Vector, HubSpot]
 foundations: [account-tiering, measuring-impact]
 sources:
   - title: "How to run multichannel ABM ads - Full-Funnel"
     url: https://fullfunnel.substack.com/p/how-to-run-multichannel-abm-ads-across
+  - title: "Inside Datadog's ABM machine - The Demand Collective"
+    url: https://demandcollective.substack.com/p/inside-datadogs-abm-machine
 ---
 
 ## Why it works
@@ -35,6 +37,8 @@ Finally, B2B purchases are made by committees. Reaching only one or two people o
 ## Example
 
 Tabs builds target account audiences in Primer synced to their company tiers A, B and C, defines buying committee titles (CEO, CFO, VP Finance), then activates the same audience on LinkedIn, Meta, YouTube, Google and Reddit. On Meta, cost per lead came in at about a quarter of LinkedIn's once they switched from affinity audiences to CRM account lists.
+
+Datadog applies the same idea at the level of individual people. Every week they push the contacts most likely to book a meeting into Vector, which targets those specific people with ads on Facebook, Instagram, Reddit and YouTube, personalised to their pain point, segment and role. On LinkedIn they run account-level ads to microsites, and they add direct mail aimed at booking meetings.
 
 ## Prerequisites
 

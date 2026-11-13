@@ -96,3 +96,15 @@
   origin: Akerlof, 1970
   definition: An offer attracts the people who benefit most from it, which is not always the people you want.
   in_practice: Broad incentive offers attract incentive-seekers, so your lead volume rises while lead quality falls.
+
+- id: cognitive-load
+  name: Cognitive load
+  origin: Sweller, 1988
+  definition: Working memory can only hold a few things at once. Give people too much to process and they take in nothing.
+  in_practice: An ad showing one feature in thirty seconds is understood. An ad showing a whole dashboard is scrolled past.
+
+- id: liking
+  name: Liking
+  origin: Cialdini, 1984
+  definition: People say yes more readily to people they know and like. Familiarity with a face builds a sense of relationship before any meeting.
+  in_practice: A prospect who has watched your account executive on their feed for weeks arrives at the first call feeling they already know them.

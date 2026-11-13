@@ -13,6 +13,8 @@ foundations: []
 sources:
   - title: "How to run multichannel ABM ads - Full-Funnel"
     url: https://fullfunnel.substack.com/p/how-to-run-multichannel-abm-ads-across
+  - title: "He's done 852 B2B video ads, here's what the top 1% have in common - The Demand Collective"
+    url: https://demandcollective.substack.com/p/hes-done-852-b2b-video-ads-heres
 ---
 
 ## Why it works
@@ -28,9 +30,12 @@ Humour and surprise create a positive feeling. People then judge the brand partl
 1. **Find the moment of pain.** Write down the specific, everyday moment your buyer feels the problem. For example, "that moment when you over-ordered again and have a full stock of spoiled food".
 2. **Find a concrete image for it.** Something visual and familiar that captures the feeling or the fix.
 3. **Write a headline that links the image to the business outcome.** For example, "Your margins get spoiled the same way as your food."
-4. **Keep it simple enough to get in two seconds.** If it needs explaining, simplify.
-5. **Adapt per channel.** Brand video on YouTube, vertical cut for Meta and Instagram, native-feeling version for Reddit.
-6. **Test a few concepts with real buyers** before investing heavily. Check that the joke resonates with them, not just your team.
+
+For Scribe, whose buyers struggle with out-of-date onboarding material, video producer Connor Lewis built the ad around a dusty binder labelled "manuals from 1999": a pain point you can hold.
+4. **Consider a physical prop.** Pick a pain point you can hold, make it instantly recognisable, and exaggerate it in one dimension. If the problem is old documentation, make the binder dusty and label it "manuals from 1999".
+5. **Keep it simple enough to get in two seconds.** If it needs explaining, simplify.
+6. **Adapt per channel.** Brand video on YouTube, vertical cut for Meta and Instagram, native-feeling version for Reddit.
+7. **Test a few concepts with real buyers** before investing heavily. Check that the joke resonates with them, not just your team.
 
 ## Example
 

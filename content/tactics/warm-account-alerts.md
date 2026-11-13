@@ -13,6 +13,8 @@ foundations: [account-tiering]
 sources:
   - title: "Ad engagement signals - Fibbler"
     url: https://www.fibbler.co/ad-engagement-signals
+  - title: "Inside Datadog's ABM machine - The Demand Collective"
+    url: https://demandcollective.substack.com/p/inside-datadogs-abm-machine
   - title: "How to run multichannel ABM ads - Full-Funnel"
     url: https://fullfunnel.substack.com/p/how-to-run-multichannel-abm-ads-across
 ---
@@ -55,4 +57,5 @@ Tabs runs all their ads through Primer and uses Fibbler to identify which accoun
 
 - Sending every engaged account. Volume kills trust; sales stops looking.
 - No reason attached. "This account is warm" without the why gets ignored.
+- Stopping at the account. "This company visited our site" still leaves reps asking who to contact and what to say. Datadog found account-level warm lists lost sales trust, and moved to weekly lists of named people instead (see "Weekly lists of people most likely to book a meeting").
 - Opening with "I saw you clicked our ad". Use the signal to time and shape outreach, not as the opening line.

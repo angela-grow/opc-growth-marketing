@@ -13,6 +13,8 @@ foundations: [account-tiering]
 sources:
   - title: "How to run multichannel ABM ads - Full-Funnel"
     url: https://fullfunnel.substack.com/p/how-to-run-multichannel-abm-ads-across
+  - title: "Lendio's >50:1 pipe to spend LinkedIn Ads strategy - The Demand Collective"
+    url: https://demandcollective.substack.com/p/lendios-1001-pipe-to-spend-linkedin
 ---
 
 ## Why it works
@@ -31,12 +33,15 @@ Third, it creates a light fear of being left out. If colleagues are already eval
 2. **Build the audience.** The rest of that account's buying committee, by job title, minus the people already in the deal.
 3. **Create a template** where only the company name or logo changes. This keeps it scalable. It is "one to few", not truly one to one.
 4. **Write a soft, inviting message.** For example, "We're talking to your team, would you like to join the next discovery call?" or "Hey [Company], still doing billing the old way?"
-5. **Launch automatically from the CRM** so ads start within days of the opportunity opening.
-6. **Stop the ads** when the deal closes, either way.
+5. **Give the champion something to share.** Short videos featuring your account executive explain the value to colleagues the champion needs to convince.
+6. **Launch automatically from the CRM** so ads start within days of the opportunity opening.
+7. **Stop the ads** when the deal closes, either way.
 
 ## Example
 
 UserGems starts targeting the entire buying committee as soon as a tier 1 or tier 2 account has its first discovery call, with the soft ask "We're talking to your team, would you like to join the next discovery call?" Over several years they measured a 5x higher win rate for multi-threaded opportunities. Tabs runs the same play for their A and B tier accounts, with ads like "Hey Workable, still doing billing and collections the old way?"
+
+Lendio runs video ads featuring its account executives to open deals. Champions get content they can forward to colleagues, and the rest of the buying committee has already seen the rep on their feed before the first call. Even a CFO who has never met the rep may "know of" Lendio and negotiate less hard.
 
 ## Prerequisites
 
