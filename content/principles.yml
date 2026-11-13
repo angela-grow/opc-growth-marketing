@@ -1,0 +1,98 @@
+# Psychology principles referenced by tactics.
+# Each tactic lists principle ids in its front matter. Keep ids lowercase-with-hyphens.
+
+- id: mere-exposure
+  name: Mere exposure effect
+  origin: Zajonc, 1968
+  definition: People develop a preference for things simply because they have seen them before. Familiarity reads as safety.
+  in_practice: A buyer who has seen your name a dozen times is more likely to open your email, take your call and put you on the shortlist, even if they cannot remember where they saw you.
+
+- id: illusory-truth
+  name: Illusory truth effect
+  origin: Hasher, Goldstein & Toppino, 1977
+  definition: A claim heard repeatedly feels more true than one heard once, regardless of whether it is.
+  in_practice: When the same message reaches a buyer on LinkedIn, YouTube and Instagram, it stops sounding like a pitch and starts sounding like common knowledge.
+
+- id: salience
+  name: Salience
+  origin: Taylor & Fiske, 1978
+  definition: People act on what is top of mind right now. Information that is vivid or recent gets more weight than information that is not.
+  in_practice: Outreach lands best while the problem and your brand are both fresh in the buyer's head, not three weeks later.
+
+- id: source-credibility
+  name: Source credibility
+  origin: Hovland & Weiss, 1951
+  definition: The same message is more persuasive coming from a source seen as expert and trustworthy. People trust people more than logos.
+  in_practice: A founder's point of view or a customer's story carries more weight than the same idea in a branded ad.
+
+- id: persuasion-knowledge
+  name: Persuasion knowledge
+  origin: Friestad & Wright, 1994
+  definition: Once people recognise a message as a sales attempt, they raise their defences and discount it.
+  in_practice: Content that does not ask for anything slips past the "this is an ad" filter and actually gets read.
+
+- id: reactance
+  name: Psychological reactance
+  origin: Brehm, 1966
+  definition: When people feel pushed or pressured, they resist to protect their sense of freedom, sometimes by doing the opposite.
+  in_practice: Hard sells and pushy follow-ups backfire with senior buyers. Leaving the choice with them keeps them open.
+
+- id: costly-signalling
+  name: Costly signalling
+  origin: Spence, 1973
+  definition: Signals that are expensive to fake are trusted as evidence of quality.
+  in_practice: A brand that shows up everywhere looks established and well funded, which makes it feel like a safe vendor to pick.
+
+- id: von-restorff
+  name: Von Restorff effect
+  origin: von Restorff, 1933
+  definition: The item that stands out from its surroundings is the one that gets remembered.
+  in_practice: In a feed of dry B2B ads, the funny or strange one is the one people recall and talk about.
+
+- id: dual-coding
+  name: Concrete imagery
+  origin: Paivio, 1971 (dual coding theory)
+  definition: Ideas tied to a concrete picture are encoded twice, as words and as an image, so they are easier to understand and recall.
+  in_practice: 'A line like "Your margins spoil like your food" sticks better than "reduce inventory waste by 20%".'
+
+- id: affect-heuristic
+  name: Affect heuristic
+  origin: Finucane, Alhakami, Slovic & Johnson, 2000
+  definition: People judge risks and benefits by how something makes them feel, then justify the decision with logic afterwards.
+  in_practice: An ad that makes a CFO smile creates a positive feeling that later colours how they judge your product.
+
+- id: social-proof
+  name: Social proof
+  origin: Cialdini, 1984
+  definition: When unsure, people look at what others like them are doing and follow.
+  in_practice: 'Hearing "your colleagues are already talking to us" is far more persuasive than any claim you make about yourself.'
+
+- id: self-reference
+  name: Self-reference effect
+  origin: Rogers, Kuiper & Kirker, 1977
+  definition: People pay more attention to, and better remember, information that relates to themselves. Our own name or company name cuts through noise instantly.
+  in_practice: An ad showing a prospect's own logo or name gets noticed in a way no generic ad can.
+
+- id: fomo
+  name: Fear of missing out
+  origin: Przybylski et al., 2013
+  definition: People feel anxious when others are part of something they are not, and act to close that gap.
+  in_practice: Telling someone their team is already in a conversation creates a pull to join it.
+
+- id: reciprocity
+  name: Reciprocity
+  origin: Gouldner, 1960; Cialdini, 1984
+  definition: When someone does something for us, we feel an obligation to give something back.
+  in_practice: A thoughtful, personal gesture earns a reply, a meeting or at least goodwill, even from people who ignore cold outreach.
+
+- id: overjustification
+  name: Overjustification effect
+  origin: Lepper, Greene & Nisbett, 1973
+  definition: Adding an external reward can replace genuine interest as the reason for acting.
+  in_practice: Offer a gift card for a demo and people take the demo for the gift card, not because they have the problem.
+
+- id: adverse-selection
+  name: Adverse selection
+  origin: Akerlof, 1970
+  definition: An offer attracts the people who benefit most from it, which is not always the people you want.
+  in_practice: Broad incentive offers attract incentive-seekers, so your lead volume rises while lead quality falls.

@@ -1,0 +1,474 @@
+<title>Growth Tactics</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Growth tactics broken into steps, with the psychology behind why each one works.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: a field guide. An index of specimen cards; each entry opens into a reading column
+   with the psychology set apart in a marker-highlighted panel and the facts in a side rail. */
+:root {
+  --paper: #F2F4F3;
+  --surface: #FFFFFF;
+  --ink: #13201B;
+  --muted: #586863;
+  --line: #D6DEDA;
+  --accent: #2445D4;
+  --marker: #FFE16A;
+  --marker-ink: #13201B;
+  --warn: #B3341F;
+  --warn-soft: #FBE9E5;
+  --why-bg: #FFF9DD;
+  --why-line: #EADB8E;
+
+  --display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --body: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --step--1: 0.8125rem;
+  --step-0: 1.0625rem;
+  --step-1: 1.25rem;
+  --step-2: 1.625rem;
+  --step-3: 2.25rem;
+  --step-4: clamp(2.4rem, 5.2vw, 3.75rem);
+  --radius: 6px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0E1412; --surface: #151D1A; --ink: #E5EDEA; --muted: #97A8A2; --line: #26332F;
+    --accent: #93A6FF; --marker: #6B5C10; --marker-ink: #FFF4C2; --warn: #F2917F; --warn-soft: #2C1A16;
+    --why-bg: #1D1D10; --why-line: #4A4518; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0E1412; --surface: #151D1A; --ink: #E5EDEA; --muted: #97A8A2; --line: #26332F;
+  --accent: #93A6FF; --marker: #6B5C10; --marker-ink: #FFF4C2; --warn: #F2917F; --warn-soft: #2C1A16;
+  --why-bg: #1D1D10; --why-line: #4A4518; color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: var(--step-0);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible {
+  outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px;
+}
+h1, h2, h3 { font-family: var(--display); line-height: 1.12; text-wrap: balance; margin: 0; letter-spacing: -0.01em; }
+p { margin: 0; }
+.label {
+  font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted);
+}
+.mark {
+  background: linear-gradient(transparent 52%, var(--marker) 52%, var(--marker) 92%, transparent 92%);
+  color: inherit; padding-inline: 2px; box-decoration-break: clone; -webkit-box-decoration-break: clone;
+}
+
+.page {
+  max-width: 1180px; margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 72px;
+}
+
+/* Top bar */
+.topbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding-block: 20px; border-bottom: 1px solid var(--line); }
+.brand { display: flex; align-items: center; gap: 10px; font-family: var(--display); font-weight: 800; font-size: 1.15rem; color: var(--ink); text-decoration: none; letter-spacing: -0.02em; }
+.brand-mark { width: 26px; height: 26px; border-radius: 50%; background: var(--ink); position: relative; flex: none; }
+.brand-mark::after { content: ""; position: absolute; left: 6px; right: 6px; top: 12px; height: 6px; background: var(--marker); border-radius: 2px; }
+.nav { display: flex; gap: 4px; flex-wrap: wrap; }
+.nav a { font-family: var(--display); font-weight: 500; font-size: 0.95rem; color: var(--muted); text-decoration: none; padding: 6px 12px; border-radius: 999px; }
+.nav a:hover { color: var(--ink); }
+.nav a[aria-current="page"] { color: var(--ink); background: var(--surface); box-shadow: inset 0 0 0 1px var(--line); }
+
+/* Hero */
+.hero { padding-block: 56px 40px; display: grid; gap: 18px; max-width: 860px; }
+.hero h1 { font-size: var(--step-4); font-weight: 800; letter-spacing: -0.03em; }
+.hero .lede { font-size: var(--step-1); color: var(--muted); max-width: 60ch; }
+.stats { display: flex; gap: 20px; flex-wrap: wrap; font-family: var(--mono); font-size: var(--step--1); color: var(--muted); }
+.stats b { color: var(--ink); font-weight: 500; }
+
+/* Filters */
+.filters { display: grid; gap: 14px; padding: 18px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); margin-bottom: 28px; }
+.filter-row { display: flex; gap: 10px 16px; flex-wrap: wrap; align-items: center; }
+.search { flex: 1 1 260px; min-width: 0; position: relative; }
+.search input { width: 100%; font: inherit; font-family: var(--display); font-size: 1rem; padding: 10px 14px 10px 38px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--paper); color: var(--ink); }
+.search svg { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--muted); }
+.select { display: flex; align-items: center; gap: 8px; }
+.select select { font: inherit; font-family: var(--display); font-size: 0.95rem; padding: 9px 30px 9px 12px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--paper); color: var(--ink); max-width: 100%; }
+.chips { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+.chip { font-family: var(--display); font-size: 0.9rem; font-weight: 500; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--line); background: transparent; color: var(--ink); cursor: pointer; }
+.chip:hover { border-color: var(--muted); }
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.result-line { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 14px; }
+.linkish { font: inherit; font-family: var(--display); font-size: 0.9rem; background: none; border: 0; color: var(--accent); cursor: pointer; padding: 0; text-decoration: underline; text-underline-offset: 3px; }
+
+/* Cards */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 330px), 1fr)); gap: 16px; }
+.card {
+  display: grid; grid-template-rows: auto auto 1fr auto; gap: 12px; padding: 22px; min-width: 0;
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+  color: var(--ink); text-decoration: none; transition: border-color .15s, transform .15s;
+}
+.card:hover { border-color: var(--ink); transform: translateY(-2px); }
+.card h3 { font-size: 1.32rem; font-weight: 700; }
+.card .summary { color: var(--muted); font-size: 0.98rem; line-height: 1.5; }
+.card .why-line { border-top: 1px dashed var(--line); padding-top: 12px; display: grid; gap: 6px; }
+.card .why-line .names { font-size: 0.95rem; line-height: 1.7; }
+.card.anti { background: var(--warn-soft); border-style: dashed; border-color: var(--warn); }
+.card.anti:hover { border-style: solid; }
+.anti-tag { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--warn); }
+.empty { padding: 48px 24px; text-align: center; color: var(--muted); border: 1px dashed var(--line); border-radius: var(--radius); }
+
+/* Funnel meter: one tick per stage, filled where the tactic applies */
+.meter-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.meter { display: inline-grid; grid-template-columns: repeat(5, 14px); gap: 3px; flex: none; }
+.meter i { height: 6px; border-radius: 2px; background: var(--line); }
+.meter i.on { background: var(--accent); }
+.anti .meter i.on { background: var(--warn); }
+
+/* Section headings on home */
+.section-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin: 64px 0 18px; flex-wrap: wrap; }
+.section-head h2 { font-size: var(--step-2); font-weight: 700; }
+.section-head p { color: var(--muted); max-width: 60ch; }
+
+.foundation-card { display: grid; gap: 10px; padding: 22px; border: 1px solid var(--line); border-radius: var(--radius); background: transparent; color: var(--ink); text-decoration: none; }
+.foundation-card:hover { border-color: var(--ink); }
+.foundation-card h3 { font-size: 1.25rem; }
+.foundation-card p { color: var(--muted); font-size: 0.98rem; line-height: 1.5; }
+
+/* Tactic page */
+.back { display: inline-flex; gap: 6px; align-items: center; margin-top: 28px; font-family: var(--display); font-size: 0.95rem; text-decoration: none; }
+.entry-head { padding-block: 22px 32px; display: grid; gap: 16px; max-width: 820px; }
+.entry-head h1 { font-size: var(--step-4); font-weight: 800; letter-spacing: -0.03em; }
+.entry-head .lede { font-size: var(--step-1); color: var(--muted); max-width: 62ch; }
+.entry { display: grid; grid-template-columns: minmax(0, 1fr) 280px; gap: 48px; align-items: start; }
+.entry-main { display: grid; gap: 44px; min-width: 0; max-width: 70ch; }
+.entry-main section { display: grid; gap: 14px; min-width: 0; }
+.entry-main h2 { font-size: var(--step-2); font-weight: 700; }
+.prose { display: grid; gap: 14px; }
+.prose ul, .prose ol { margin: 0; padding-left: 1.3em; display: grid; gap: 8px; }
+.prose strong { font-weight: 600; }
+
+.why { background: var(--why-bg); border: 1px solid var(--why-line); border-radius: var(--radius); padding: 26px; display: grid; gap: 20px; }
+.why h2 { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.principle-list { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.principle-list li { display: grid; gap: 2px; padding-bottom: 12px; border-bottom: 1px dashed var(--why-line); }
+.principle-list li:last-child { border-bottom: 0; padding-bottom: 0; }
+.principle-list a { font-family: var(--display); font-weight: 700; font-size: 1.1rem; color: var(--ink); text-decoration: none; }
+.principle-list a:hover .mark { background: var(--marker); }
+.principle-list .def { font-size: 0.97rem; color: var(--muted); }
+.anti-page .why { background: var(--warn-soft); border-color: var(--warn); }
+.anti-page .why .principle-list li { border-color: var(--warn); }
+
+.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; counter-reset: step; }
+.steps li { counter-increment: step; position: relative; padding: 14px 0 14px 58px; border-top: 1px solid var(--line); }
+.steps li:last-child { border-bottom: 1px solid var(--line); }
+.steps li::before { content: counter(step, decimal-leading-zero); position: absolute; left: 0; top: 18px; font-family: var(--mono); font-size: 0.85rem; color: var(--accent); }
+.steps li p { margin: 0; }
+.steps strong { font-family: var(--display); font-weight: 700; }
+
+.example { border-left: 3px solid var(--ink); padding: 4px 0 4px 22px; display: grid; gap: 12px; font-size: 1.12rem; line-height: 1.6; }
+
+.trio { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 16px; }
+.trio section { padding: 18px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); gap: 10px; align-content: start; }
+.trio h2 { font-size: 1.1rem; }
+.trio .prose { font-size: 0.95rem; line-height: 1.55; }
+.trio .prose ul { gap: 6px; }
+.trio section.pit h2 { color: var(--warn); }
+
+.rail { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 20px); display: grid; gap: 0; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+.rail > div { padding: 14px 18px; border-bottom: 1px solid var(--line); display: grid; gap: 6px; }
+.rail > div:last-child { border-bottom: 0; }
+.rail .val { font-family: var(--display); font-size: 0.98rem; }
+.rail ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; font-family: var(--display); font-size: 0.95rem; }
+.dots { display: inline-flex; gap: 4px; align-items: center; }
+.dots i { width: 9px; height: 9px; border-radius: 50%; border: 1.5px solid var(--ink); }
+.dots i.on { background: var(--ink); }
+.dots span { margin-left: 6px; text-transform: capitalize; }
+.cost { font-family: var(--mono); letter-spacing: 0.05em; }
+.cost .off { color: var(--line); }
+.tags { display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-family: var(--display); font-size: 0.85rem; padding: 2px 9px; border-radius: 999px; background: var(--paper); border: 1px solid var(--line); }
+
+/* Principles page */
+.principles { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 360px), 1fr)); gap: 16px; }
+.principle { display: grid; gap: 10px; align-content: start; padding: 22px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); scroll-margin-top: 24px; min-width: 0; }
+.principle.target { border-color: var(--ink); box-shadow: 0 0 0 3px var(--marker); }
+.principle h2 { font-size: 1.35rem; }
+.principle .def { font-size: 1rem; }
+.principle .practice { font-size: 0.95rem; color: var(--muted); font-style: italic; }
+.principle .used { border-top: 1px dashed var(--line); padding-top: 10px; display: grid; gap: 6px; }
+.principle .used ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; font-family: var(--display); font-size: 0.95rem; }
+
+/* Foundation page */
+.article { max-width: 72ch; display: grid; gap: 18px; padding-bottom: 24px; }
+.article h2 { font-size: var(--step-2); margin-top: 22px; }
+.article ul, .article ol { margin: 0; padding-left: 1.3em; display: grid; gap: 8px; }
+.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+.table-wrap table { border-collapse: collapse; width: 100%; min-width: 560px; font-size: 0.95rem; line-height: 1.5; }
+.table-wrap th, .table-wrap td { text-align: left; vertical-align: top; padding: 12px 14px; border-bottom: 1px solid var(--line); }
+.table-wrap th { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+.table-wrap tr:last-child td { border-bottom: 0; }
+.sources { display: grid; gap: 6px; font-family: var(--display); font-size: 0.95rem; }
+.sources ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+
+.footer { margin-top: 80px; padding-top: 20px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; color: var(--muted); font-size: 0.9rem; }
+
+@media (max-width: 900px) {
+  .entry { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  .rail { position: static; order: -1; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+  .rail > div { border-bottom: 1px solid var(--line); }
+}
+@media (max-width: 520px) {
+  .hero { padding-block: 36px 28px; }
+  .why { padding: 18px; }
+  .steps li { padding-left: 42px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; scroll-behavior: auto !important; }
+}
+</style>
+<!-- BODY -->
+<div class="page">
+  <header class="topbar">
+    <a class="brand" href="#tactics"><span class="brand-mark" aria-hidden="true"></span>Growth Tactics</a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#tactics" data-nav="tactics">Tactics</a>
+      <a href="#principles" data-nav="principles">Psychology</a>
+      <a href="#foundations" data-nav="foundations">Foundations</a>
+    </nav>
+  </header>
+  <main id="view"></main>
+  <footer class="footer">
+    <span>Growth Tactics. Every play, broken into steps, with the reason it works.</span>
+    <span id="foot-count"></span>
+  </footer>
+</div>
+<script>
+(function () {
+  const DATA = /*__DATA__*/null;
+  const view = document.getElementById('view');
+  const byPrinciple = Object.fromEntries(DATA.principles.map((p) => [p.id, p]));
+  const byStage = Object.fromEntries(DATA.stages.map((s) => [s.id, s]));
+  const byChannel = Object.fromEntries(DATA.channels.map((c) => [c.id, c]));
+  const byFoundation = Object.fromEntries(DATA.foundations.map((f) => [f.slug, f]));
+  const state = { q: '', stage: '', channel: '', principle: '' };
+
+  const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const usedPrinciples = DATA.principles.filter((p) => DATA.tactics.some((t) => t.principles.includes(p.id)));
+  const usedChannels = DATA.channels.filter((c) => DATA.tactics.some((t) => t.channels.includes(c.id)));
+
+  document.getElementById('foot-count').textContent =
+    `${DATA.tactics.length} entries, ${DATA.principles.length} principles`;
+
+  function meter(t) {
+    const ticks = DATA.stages.map((s) => `<i class="${t.stages.includes(s.id) ? 'on' : ''}"></i>`).join('');
+    const names = t.stages.map((s) => byStage[s]?.name).join(' + ');
+    return `<div class="meter-row"><span class="meter" aria-hidden="true">${ticks}</span><span class="label">${esc(names)}</span></div>`;
+  }
+
+  function card(t) {
+    const anti = t.kind === 'anti-pattern';
+    const names = t.principles.map((id) => `<span class="mark">${esc(byPrinciple[id]?.name)}</span>`).join(', ');
+    return `<a class="card${anti ? ' anti' : ''}" href="#tactic-${t.slug}">
+      ${meter(t)}
+      <div style="display:grid;gap:6px">${anti ? '<span class="anti-tag">Anti-pattern</span>' : ''}<h3>${esc(t.title)}</h3></div>
+      <p class="summary">${esc(t.summary)}</p>
+      <div class="why-line"><span class="label">${anti ? 'Backfires because of' : 'Works because of'}</span><span class="names">${names}</span></div>
+    </a>`;
+  }
+
+  function matches(t) {
+    if (state.stage && !t.stages.includes(state.stage)) return false;
+    if (state.channel && !t.channels.includes(state.channel)) return false;
+    if (state.principle && !t.principles.includes(state.principle)) return false;
+    if (state.q) {
+      const hay = [t.title, t.summary, t.tools.join(' '), t.principles.map((id) => byPrinciple[id]?.name).join(' ')].join(' ').toLowerCase();
+      if (!state.q.toLowerCase().split(/\s+/).every((w) => hay.includes(w))) return false;
+    }
+    return true;
+  }
+
+  function renderHome(scrollTo) {
+    const stageChips = [{ id: '', name: 'All stages' }, ...DATA.stages].map((s) =>
+      `<button type="button" class="chip" data-stage="${s.id}" aria-pressed="${state.stage === s.id}">${esc(s.name)}</button>`).join('');
+    view.innerHTML = `
+      <section class="hero">
+        <span class="label">A field guide for growth teams</span>
+        <h1>Growth plays, and the <span class="mark">psychology</span> that makes them work.</h1>
+        <p class="lede">Each tactic is broken into steps you can run, with a real example and the human behaviour that explains why it works. Filter by funnel stage, channel or principle.</p>
+        <div class="stats"><span><b>${DATA.tactics.filter((t) => t.kind === 'tactic').length}</b> tactics</span><span><b>${DATA.tactics.filter((t) => t.kind !== 'tactic').length}</b> anti-patterns</span><span><b>${DATA.principles.length}</b> psychology principles</span><span><b>${DATA.foundations.length}</b> foundations</span></div>
+      </section>
+      <section class="filters" aria-label="Filter tactics">
+        <div class="filter-row">
+          <label class="search"><span class="label" style="position:absolute;left:-9999px">Search</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.25" stroke="currentColor" stroke-width="1.5"/><path d="M11 11l3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <input id="q" type="search" placeholder="Search tactics, tools or principles" value="${esc(state.q)}" autocomplete="off">
+          </label>
+          <label class="select"><span class="label">Channel</span>
+            <select id="channel"><option value="">All</option>${usedChannels.map((c) => `<option value="${c.id}"${state.channel === c.id ? ' selected' : ''}>${esc(c.name)}</option>`).join('')}</select>
+          </label>
+          <label class="select"><span class="label">Principle</span>
+            <select id="principle"><option value="">All</option>${usedPrinciples.map((p) => `<option value="${p.id}"${state.principle === p.id ? ' selected' : ''}>${esc(p.name)}</option>`).join('')}</select>
+          </label>
+        </div>
+        <div class="chips" role="group" aria-label="Funnel stage">${stageChips}</div>
+      </section>
+      <div class="result-line"><span class="label" id="count"></span><button type="button" class="linkish" id="clear" hidden>Clear filters</button></div>
+      <div class="grid" id="grid"></div>
+      <div class="section-head" id="foundations"><h2>Foundations</h2><p>The groundwork most tactics depend on. Read these before running the plays.</p></div>
+      <div class="grid">${DATA.foundations.map((f) => `<a class="foundation-card" href="#foundation-${f.slug}"><span class="label">Foundation</span><h3>${esc(f.title)}</h3><p>${esc(f.summary)}</p></a>`).join('')}</div>`;
+
+    const grid = document.getElementById('grid');
+    const update = () => {
+      const list = DATA.tactics.filter(matches);
+      grid.innerHTML = list.length ? list.map(card).join('') : '<p class="empty">No tactics match these filters yet.</p>';
+      document.getElementById('count').textContent = `${list.length} of ${DATA.tactics.length} entries`;
+      document.getElementById('clear').hidden = !(state.q || state.stage || state.channel || state.principle);
+      view.querySelectorAll('[data-stage]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.stage === state.stage)));
+    };
+    document.getElementById('q').addEventListener('input', (e) => { state.q = e.target.value.trim(); update(); });
+    document.getElementById('channel').addEventListener('change', (e) => { state.channel = e.target.value; update(); });
+    document.getElementById('principle').addEventListener('change', (e) => { state.principle = e.target.value; update(); });
+    view.querySelectorAll('[data-stage]').forEach((b) => b.addEventListener('click', () => { state.stage = b.dataset.stage; update(); }));
+    document.getElementById('clear').addEventListener('click', () => {
+      Object.assign(state, { q: '', stage: '', channel: '', principle: '' });
+      renderHome();
+    });
+    update();
+    if (scrollTo) document.getElementById(scrollTo)?.scrollIntoView();
+  }
+
+  function sourcesBlock(sources) {
+    if (!sources.length) return '';
+    return `<div class="sources"><span class="label">Sources</span><ul>${sources.map((s) => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a></li>`).join('')}</ul></div>`;
+  }
+
+  function renderTactic(t) {
+    const anti = t.kind === 'anti-pattern';
+    const S = t.sections;
+    const effortN = { low: 1, medium: 2, high: 3 }[t.effort] || 0;
+    const costN = (t.cost || '').length;
+    const related = DATA.tactics
+      .filter((o) => o.slug !== t.slug)
+      .map((o) => ({ o, n: o.principles.filter((p) => t.principles.includes(p)).length }))
+      .filter((x) => x.n > 0)
+      .sort((a, b) => b.n - a.n)
+      .slice(0, 3)
+      .map((x) => x.o);
+    const stepsHtml = (S.steps || '').replace('<ol>', '<ol class="steps">');
+
+    view.innerHTML = `
+      <a class="back" href="#tactics">&larr; All tactics</a>
+      <article class="${anti ? 'anti-page' : ''}">
+        <header class="entry-head">
+          ${meter(t)}
+          ${anti ? '<span class="anti-tag">Anti-pattern: avoid this</span>' : ''}
+          <h1>${esc(t.title)}</h1>
+          <p class="lede">${esc(t.summary)}</p>
+        </header>
+        <div class="entry">
+          <div class="entry-main">
+            <section class="why">
+              <h2>${anti ? 'Why it backfires' : 'Why it works'}</h2>
+              <ul class="principle-list">${t.principles.map((id) => {
+                const p = byPrinciple[id];
+                return `<li><a href="#principle-${id}"><span class="mark">${esc(p.name)}</span></a><span class="label">${esc(p.origin)}</span><span class="def">${esc(p.definition)}</span></li>`;
+              }).join('')}</ul>
+              <div class="prose">${S.why || ''}</div>
+            </section>
+            ${S.steps ? `<section><h2>${anti ? 'What to do instead' : 'How to run it'}</h2><div class="prose">${stepsHtml}</div></section>` : ''}
+            ${S.example ? `<section><span class="label">In the wild</span><div class="example prose">${S.example}</div></section>` : ''}
+            <div class="trio">
+              ${S.prerequisites ? `<section><h2>Before you start</h2><div class="prose">${S.prerequisites}</div></section>` : ''}
+              ${S.measure ? `<section><h2>How to measure</h2><div class="prose">${S.measure}</div></section>` : ''}
+              ${S.pitfalls ? `<section class="pit"><h2>Pitfalls</h2><div class="prose">${S.pitfalls}</div></section>` : ''}
+            </div>
+          </div>
+          <aside class="rail" aria-label="At a glance">
+            <div><span class="label">Funnel stage</span><span class="val">${t.stages.map((s) => esc(byStage[s]?.name)).join(', ')}</span></div>
+            <div><span class="label">Channel</span><span class="val">${t.channels.map((c) => esc(byChannel[c]?.name)).join(', ')}</span></div>
+            ${effortN ? `<div><span class="label">Effort</span><span class="val dots">${[1, 2, 3].map((i) => `<i class="${i <= effortN ? 'on' : ''}"></i>`).join('')}<span>${esc(t.effort)}</span></span></div>` : ''}
+            ${costN ? `<div><span class="label">Cost</span><span class="val cost">${'$'.repeat(costN)}<span class="off">${'$'.repeat(Math.max(0, 3 - costN))}</span></span></div>` : ''}
+            ${t.time ? `<div><span class="label">Time to impact</span><span class="val">${esc(t.time)}</span></div>` : ''}
+            ${t.tools.length ? `<div><span class="label">Example tools</span><span class="tags">${t.tools.map((x) => `<span class="tag">${esc(x)}</span>`).join('')}</span></div>` : ''}
+            ${t.foundations.length ? `<div><span class="label">Read first</span><ul>${t.foundations.map((f) => `<li><a href="#foundation-${f}">${esc(byFoundation[f]?.title)}</a></li>`).join('')}</ul></div>` : ''}
+            ${t.sources.length ? `<div>${sourcesBlock(t.sources)}</div>` : ''}
+          </aside>
+        </div>
+      </article>
+      ${related.length ? `<div class="section-head"><h2>Same psychology, different play</h2></div><div class="grid">${related.map(card).join('')}</div>` : ''}`;
+  }
+
+  function renderPrinciples(target) {
+    view.innerHTML = `
+      <section class="hero">
+        <span class="label">The psychology</span>
+        <h1>Why people <span class="mark">say yes</span>.</h1>
+        <p class="lede">The behavioural principles behind every tactic in this library, each with where it comes from and what it means for growth work.</p>
+      </section>
+      <div class="principles">${DATA.principles.map((p) => {
+        const used = DATA.tactics.filter((t) => t.principles.includes(p.id));
+        return `<article class="principle${p.id === target ? ' target' : ''}" id="principle-${p.id}">
+          <span class="label">${esc(p.origin)}</span>
+          <h2><span class="mark">${esc(p.name)}</span></h2>
+          <p class="def">${esc(p.definition)}</p>
+          <p class="practice">${esc(p.in_practice)}</p>
+          ${used.length ? `<div class="used"><span class="label">Used in</span><ul>${used.map((t) => `<li><a href="#tactic-${t.slug}">${esc(t.title)}</a></li>`).join('')}</ul></div>` : ''}
+        </article>`;
+      }).join('')}</div>`;
+    if (target) document.getElementById(`principle-${target}`)?.scrollIntoView({ block: 'start' });
+  }
+
+  function renderFoundation(f) {
+    view.innerHTML = `
+      <a class="back" href="#foundations">&larr; All foundations</a>
+      <header class="entry-head"><span class="label">Foundation</span><h1>${esc(f.title)}</h1><p class="lede">${esc(f.summary)}</p></header>
+      <div class="article prose">${f.html}${sourcesBlock(f.sources)}</div>`;
+    view.querySelectorAll('.article table').forEach((tbl) => {
+      const wrap = document.createElement('div');
+      wrap.className = 'table-wrap';
+      tbl.replaceWith(wrap);
+      wrap.appendChild(tbl);
+    });
+  }
+
+  function route() {
+    const h = decodeURIComponent(location.hash.slice(1));
+    let nav = 'tactics';
+    let keepScroll = false;
+    if (h.startsWith('tactic-')) {
+      const t = DATA.tactics.find((x) => x.slug === h.slice(7));
+      t ? renderTactic(t) : renderHome();
+    } else if (h === 'principles' || h.startsWith('principle-')) {
+      nav = 'principles';
+      renderPrinciples(h.startsWith('principle-') ? h.slice(10) : '');
+      keepScroll = h.startsWith('principle-');
+    } else if (h.startsWith('foundation-')) {
+      nav = 'foundations';
+      const f = byFoundation[h.slice(11)];
+      f ? renderFoundation(f) : renderHome();
+    } else if (h === 'foundations') {
+      nav = 'foundations';
+      renderHome('foundations');
+      keepScroll = true;
+    } else {
+      renderHome();
+    }
+    document.querySelectorAll('[data-nav]').forEach((a) => {
+      if (a.dataset.nav === nav) a.setAttribute('aria-current', 'page');
+      else a.removeAttribute('aria-current');
+    });
+    if (!keepScroll) window.scrollTo(0, 0);
+  }
+
+  window.addEventListener('hashchange', route);
+  route();
+})();
+</script>
