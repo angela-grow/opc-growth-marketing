@@ -108,3 +108,27 @@
   origin: Cialdini, 1984
   definition: People say yes more readily to people they know and like. Familiarity with a face builds a sense of relationship before any meeting.
   in_practice: A prospect who has watched your account executive on their feed for weeks arrives at the first call feeling they already know them.
+
+- id: satisficing
+  name: Satisficing
+  origin: Simon, 1956
+  definition: People rarely search for the best option. They take the first one that is good enough and stop looking.
+  in_practice: When an AI assistant recommends one tool, most people try that tool rather than comparing five. Being the first good-enough answer is what counts.
+
+- id: awareness-levels
+  name: Stages of awareness
+  origin: Schwartz, 1966
+  definition: Buyers range from unaware of their problem, to problem-aware, to solution-aware, to product-aware. Each stage needs a different message.
+  in_practice: Someone who only knows the outcome they want ("scrape this site") will never search for your product name. You have to meet them at the problem.
+
+- id: ikea-effect
+  name: IKEA effect
+  origin: Norton, Mochon & Ariely, 2012
+  definition: People value things more when they have put their own effort into building them, and are slower to abandon them.
+  in_practice: Developers who wrote an integration by hand forgave a rough setup. When an AI agent writes it in seconds, that attachment disappears, and so does the patience.
+
+- id: friction
+  name: Ability and friction
+  origin: Fogg, 2009 (Fogg Behavior Model)
+  definition: A behaviour happens when motivation, ability and a prompt meet. Making something easier to do often works better than making people want it more.
+  in_practice: Removing one broken step from onboarding can lift activation more than any amount of persuasion on the homepage.

@@ -24,6 +24,7 @@ const CHANNELS = [
   { id: 'paid-ads', name: 'Paid ads' },
   { id: 'outbound', name: 'Outbound' },
   { id: 'content', name: 'Content' },
+  { id: 'search-ai', name: 'Search & AI answers' },
   { id: 'offline', name: 'Offline' },
   { id: 'events', name: 'Events' },
   { id: 'product', name: 'Product' },

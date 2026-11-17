@@ -31,3 +31,5 @@ Primer's research across 379 B2B advertisers found:
 - For long sales cycles, watch **website visit lift** from exposed accounts rather than waiting for form fills. Where both could be measured, visit lift and form-fill lift moved in the same direction 92% of the time.
 - Look for **triangulation**: where several different measures agree that a channel is working.
 - Set up measurement **before** you launch, or you will not be able to prove anything afterwards.
+
+For how to present all of this to a leadership team, see [Reporting marketing's impact to leadership](#foundation-reporting-to-leadership).
