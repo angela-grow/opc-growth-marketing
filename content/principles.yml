@@ -121,11 +121,6 @@
   definition: Buyers range from unaware of their problem, to problem-aware, to solution-aware, to product-aware. Each stage needs a different message.
   in_practice: Someone who only knows the outcome they want ("scrape this site") will never search for your product name. You have to meet them at the problem.
 
-- id: ikea-effect
-  name: IKEA effect
-  origin: Norton, Mochon & Ariely, 2012
-  definition: People value things more when they have put their own effort into building them, and are slower to abandon them.
-  in_practice: Developers who wrote an integration by hand forgave a rough setup. When an AI agent writes it in seconds, that attachment disappears, and so does the patience.
 
 - id: friction
   name: Ability and friction

@@ -4,7 +4,7 @@ summary: Treat the AI coding agent as your most important new user. Watch it try
 kind: tactic
 stages: [conversion]
 channels: [product]
-principles: [friction, ikea-effect, cognitive-load]
+principles: [friction, cognitive-load]
 effort: medium
 cost: $
 time_to_impact: Weeks
@@ -17,9 +17,11 @@ sources:
 
 ## Why it works
 
-Engineers increasingly hand setup to an AI agent instead of reading the docs and writing code themselves. That changes the psychology of switching. When a person built an integration by hand, the effort made them attached to it, so they forgave a rough setup, a confusing error or a missing example. Code written by an agent in seconds carries no such attachment. If your setup fights the agent, it throws the code away and tries a competitor. Switching used to cost a rewrite. Now it costs a sentence. This is "instant churn".
+Engineers increasingly hand setup to an AI agent instead of reading the docs and writing code themselves. If your setup fights the agent, it does not debug the problem. It throws the code away and tries a competitor. Switching used to cost a rewrite. Now it costs a sentence. This is "instant churn".
 
-So the lever is ease, not persuasion. Every step that confuses the agent is a point where the user can give up. Removing friction lifts activation more directly than any homepage copy.
+So the lever is ease, not persuasion. People act when something is easy enough to do in the moment, and every confusing step is a point where the user can give up. Removing friction lifts activation more directly than any homepage copy.
+
+Clarity matters for the same reason. An agent that has to wade through several pages, broken links and guessed package names is overloaded in the same way a person is. One clear path to a working result keeps it on track.
 
 ## Steps
 
